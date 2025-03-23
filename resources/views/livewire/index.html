@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>طباعة مباشرة</title>
+    <style>
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="no-print">
+        <input type="text" id="textToPrint" placeholder="أدخل النص هنا">
+        <button onclick="preparePrint()">اطبع الآن</button>
+    </div>
+    <div id="printArea"></div>
+
+    <script>
+        function preparePrint() {
+            // إضافة النص إلى منطقة الطباعة
+            const text = document.getElementById('textToPrint').value;
+            document.getElementById('printArea').innerText = text;
+
+            // بدء عملية الطباعة
+            window.print();
+        }
+    </script>
+</body>
+</html>

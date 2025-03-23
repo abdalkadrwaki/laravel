@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-container {
+    @apply p-4 rounded bg-custom-gray;
+  }
+
+  .form-row {
+    @apply flex flex-wrap mb-4 -mx-3;
+    
+  }
+
+  .form-col-6 {
+    @apply w-full px-3 mb-4 md:w-1/2 md:mb-0;
+  }
+
+  .form-col-12 {
+    @apply w-full px-3 mb-4;
+  }
+
+  .form-label {
+    @apply block mb-2 text-sm font-bold text-gray-700;
+  }
+
+  .form-control {
+    @apply w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none;
+  }
+
+  .form-control:focus {
+    @apply outline-none ring-2 ring-blue-500;
+  }
+
+  .form-select {
+    @apply form-control;
+  }
+
+  .form-error {
+    @apply mt-1 text-sm text-form-error;
+  }
+
+  .form-submit-btn {
+    @apply w-full px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-700;
+  }
+}
